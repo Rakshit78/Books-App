@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Booklist component render component without error with snapshot 1`] = `
+<RCTScrollView
+  style={
+    {
+      "backgroundColor": "#101010",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        {
+          "color": "#FFF",
+          "fontSize": 28,
+          "fontWeight": "700",
+          "marginHorizontal": 28,
+          "marginTop": 10,
+        }
+      }
+    >
+      Search for Books
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#1A1A1A",
+          "borderRadius": 30,
+          "color": "#FFF",
+          "flexDirection": "row",
+          "height": 50,
+          "marginHorizontal": "auto",
+          "marginTop": 35,
+          "padding": 10,
+          "width": "90%",
+        }
+      }
+    >
+      <Text />
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="Search"
+        placeholderTextColor="#C4B4A0"
+        style={
+          {
+            "color": "#FFF",
+            "fontSize": 18,
+            "height": 30,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "justifyContent": "center",
+          "marginHorizontal": "auto",
+          "marginTop": -30,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "space-evenly",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginVertical": 80,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;

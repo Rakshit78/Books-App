@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Books detail render booksdetails component without error 1`] = `
+<Modal
+  animationType="slide"
+  hardwareAccelerated={false}
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+        },
+        {
+          "flex": 1,
+        },
+      ]
+    }
+  >
+    <ViewManagerAdapter_ExpoBlurView
+      blurReductionFactor={4}
+      experimentalBlurMethod="none"
+      intensity={20}
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      tint="default"
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#1A1A1A",
+          "borderTopEndRadius": 15,
+          "borderTopLeftRadius": 15,
+          "flex": 1,
+          "marginTop": "35%",
+          "shadowColor": "gray",
+          "shadowOffset": {
+            "height": 0.1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.5,
+          "shadowRadius": 2,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignSelf": "flex-start",
+            "backgroundColor": "#131313",
+            "borderRadius": 50,
+            "margin": 10,
+            "opacity": 1,
+            "padding": 10,
+          }
+        }
+      >
+        <Text />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "height": 220,
+            "marginHorizontal": 10,
+            "marginTop": 0,
+            "shadowColor": "gray",
+            "shadowOffset": {
+              "height": 0.1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.5,
+            "shadowRadius": 2,
+            "width": "96%",
+          }
+        }
+      >
+        <Image
+          resizeMode="cover"
+          source={
+            {
+              "uri": undefined,
+            }
+          }
+          style={
+            {
+              "height": 190,
+              "marginHorizontal": "auto",
+              "marginVertical": "auto",
+              "resizeMode": "contain",
+              "width": "75%",
+            }
+          }
+        />
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "bottom": -30,
+              "color": "#FFF",
+              "fontSize": 22,
+              "fontWeight": "600",
+              "marginHorizontal": "auto",
+              "position": "absolute",
+              "textAlign": "center",
+              "width": "100%",
+            }
+          }
+        />
+        <Text
+          numberOfLines={1}
+          style={
+            {
+              "bottom": -58,
+              "color": "#FFF",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "marginHorizontal": "auto",
+              "position": "absolute",
+            }
+          }
+        />
+        <Text
+          style={
+            {
+              "bottom": -90,
+              "color": "#FFF",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "marginHorizontal": "auto",
+              "position": "absolute",
+            }
+          }
+        >
+          Published Date: 
+        </Text>
+        <Text
+          style={
+            {
+              "bottom": -120,
+              "color": "#FFF",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "marginHorizontal": "auto",
+              "position": "absolute",
+            }
+          }
+        >
+          Publisher:
+           
+          Not Available
+        </Text>
+      </View>
+      <RCTScrollView
+        style={
+          {
+            "backgroundColor": "#131313",
+            "marginBottom": 30,
+            "marginTop": 150,
+            "padding": 10,
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              {
+                "color": "#FFF",
+                "fontSize": 18,
+                "fontWeight": "700",
+                "marginHorizontal": 10,
+                "marginVertical": 10,
+              }
+            }
+          >
+            Description
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#FFF",
+                "fontSize": 16,
+                "marginBottom": 50,
+                "marginHorizontal": 10,
+                "textAlign": "start",
+              }
+            }
+          />
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+</Modal>
+`;

@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { Platform, SafeAreaView, StyleSheet } from 'react-native';
+import MyStack from './navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import GlobalContext from './context';
+import { useState } from 'react';
 export default function App() {
+  const [favData, setFavData] = useState([]);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView
+      style={[styles.container, { marginTop: Platform.OS === 'ios' ? 0 : 30 }]}
+    >
+      <GlobalContext.Provider value={{ favData, setFavData }}>
+        <NavigationContainer>
+          <MyStack />
+        </NavigationContainer>
+      </GlobalContext.Provider>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#101010',
+    // marginHorizontal: 20,
   },
 });
