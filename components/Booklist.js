@@ -30,14 +30,12 @@ const Boolist = () => {
   const scrollRef = useRef();
   const handlefav = async (res) => {
     setFavData((prev) => [...prev, res]);
-    console.log(res);
     // times pro
   };
 
   const getItem = async () => {
     const data = await AsyncStorage.getItem('data');
     const jdata = await JSON.parse(data);
-    // console.log(jdata.length, 'resiiiii');
     setFavData(jdata);
   };
   useEffect(() => {
@@ -75,7 +73,6 @@ const Boolist = () => {
         }
       )
       .then((res) => {
-        console.log(res);
         setBooks(res.data.items);
         setLoading(false);
       })
@@ -122,41 +119,37 @@ const Boolist = () => {
         <View style={styles.listContainer}>
           {books.map((res, i) => {
             return (
-              <>
+              <TouchableOpacity
+                key={res.id}
+                onPress={() => setModal(res)}
+                style={styles.listItem}
+              >
+                <Image
+                  source={{
+                    uri: res.volumeInfo.imageLinks?.thumbnail,
+                  }}
+                  resizeMode='cover'
+                  style={styles.image}
+                />
                 <TouchableOpacity
-                  key={i}
-                  onPress={() => setModal(res)}
-                  style={styles.listItem}
+                  onPress={() => {
+                    !isInFavourites(res) ? handlefav(res) : removeItem(res.id);
+                  }}
+                  style={{ paddingLeft: 10, paddingBottom: 10 }}
                 >
-                  <Image
-                    source={{
-                      uri: res.volumeInfo.imageLinks?.thumbnail,
-                    }}
-                    resizeMode='cover'
-                    style={styles.image}
-                  />
-                  <TouchableOpacity
-                    onPress={() => {
-                      !isInFavourites(res)
-                        ? handlefav(res)
-                        : removeItem(res.id);
-                    }}
-                    style={{ paddingLeft: 10, paddingBottom: 10 }}
-                  >
-                    {!isInFavourites(res) ? (
-                      <FontAwesome5 name='heart' size={24} color={'#FFF'} />
-                    ) : (
-                      <FontAwesome name='heart' size={24} color='red' />
-                    )}
-                  </TouchableOpacity>
-                  <Text style={styles.title} numberOfLines={1}>
-                    {res.volumeInfo?.title}
-                  </Text>
-                  <Text style={styles.author} numberOfLines={1}>
-                    {res.volumeInfo.authors}
-                  </Text>
+                  {!isInFavourites(res) ? (
+                    <FontAwesome5 name='heart' size={24} color={'#FFF'} />
+                  ) : (
+                    <FontAwesome name='heart' size={24} color='red' />
+                  )}
                 </TouchableOpacity>
-              </>
+                <Text style={styles.title} numberOfLines={1}>
+                  {res.volumeInfo?.title}
+                </Text>
+                <Text style={styles.author} numberOfLines={1}>
+                  {res.volumeInfo.authors}
+                </Text>
+              </TouchableOpacity>
             );
           })}
         </View>
@@ -165,6 +158,7 @@ const Boolist = () => {
             [1, 2, 3, 4, 5].map((res) => {
               return (
                 <TouchableOpacity
+                  key={res}
                   onPress={() => {
                     scrollRef.current?.scrollTo({
                       y: 0,
